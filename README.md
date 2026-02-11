@@ -25,45 +25,17 @@ assets/               # статичні ресурси (зображення)
 
 ```bash
 npm install
-npm run start
+npx expo start
 ```
 
-Корисні команди:
+Після запуску:
 
-```bash
-npm run ios
-npm run android
-npm run web
-npm run lint
-npx tsc --noEmit
-```
-
-## Pre-push checklist
-
-Перед пушем рекомендовано:
-
-```bash
-npm run lint
-npx tsc --noEmit
-```
-
-Додатково (за потреби): перевірити запуск через `npx expo start`.
-
-## Git workflow
-
-```bash
-git add .
-git commit -m "your message"
-git push
-```
+- встановіть `Expo Go` на телефон;
+- відскануйте QR-код з терміналу;
+- застосунок відкриється на мобілці в Expo Go.
 
 ## Репозиторій
 
 Цільовий remote:
 
 `https://github.com/ananiev-oleksandr/mapwise-task.git`
-
-## Документація
-
-- Expo docs: https://docs.expo.dev/
-- Expo Router: https://docs.expo.dev/router/introduction/
