@@ -1,65 +1,69 @@
-# Welcome to your Expo app 👋
+# Mapwise Task
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Мобільний застосунок на `Expo + React Native` з роутингом через `expo-router`.
 
-## Get started
+## Технології
 
-To start the app, in your terminal run:
+- `expo` `react-native` `react`
+- `expo-router`
+- `mobx` `mobx-react-lite`
+- `typescript`
+- `eslint` (`expo lint`)
+
+## Структура проєкту
+
+```text
+app/                  # екрани та маршрути (expo-router)
+components/           # перевикористовувані UI-компоненти
+constants/            # константи (кольори тощо)
+hooks/                # кастомні хуки
+stores/               # стани/стори
+assets/               # статичні ресурси (зображення)
+```
+
+## Швидкий старт
 
 ```bash
+npm install
 npm run start
 ```
 
-In the output, you'll find options to open the app in:
-
-- [a development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [an Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [an iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Workflows
-
-This project is configured to use [EAS Workflows](https://docs.expo.dev/eas/workflows/get-started/) to automate some development and release processes. These commands are set up in [`package.json`](./package.json) and can be run using NPM scripts in your terminal.
-
-### Previews
-
-Run `npm run draft` to [publish a preview update](https://docs.expo.dev/eas/workflows/examples/publish-preview-update/) of your project, which can be viewed in Expo Go or in a development build.
-
-### Development Builds
-
-Run `npm run development-builds` to [create a development build](https://docs.expo.dev/eas/workflows/examples/create-development-builds/). Note - you'll need to follow the [Prerequisites](https://docs.expo.dev/eas/workflows/examples/create-development-builds/#prerequisites) to ensure you have the correct emulator setup on your machine.
-
-### Production Deployments
-
-Run `npm run deploy` to [deploy to production](https://docs.expo.dev/eas/workflows/examples/deploy-to-production/). Note - you'll need to follow the [Prerequisites](https://docs.expo.dev/eas/workflows/examples/deploy-to-production/#prerequisites) to ensure you're set up to submit to the Apple and Google stores.
-
-## Hosting
-
-Expo offers hosting for websites and API functions via EAS Hosting. See the [Getting Started](https://docs.expo.dev/eas/hosting/get-started/) guide to learn more.
-
-
-## Get a fresh project
-
-When you're ready, run:
+Корисні команди:
 
 ```bash
-npm run reset-project
+npm run ios
+npm run android
+npm run web
+npm run lint
+npx tsc --noEmit
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Pre-push checklist
 
-## Learn more
+Перед пушем рекомендовано:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm run lint
+npx tsc --noEmit
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Додатково (за потреби): перевірити запуск через `npx expo start`.
 
-## Join the community
+## Git workflow
 
-Join our community of developers creating universal apps.
+```bash
+git add .
+git commit -m "your message"
+git push
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Репозиторій
+
+Цільовий remote:
+
+`https://github.com/ananiev-oleksandr/mapwise-task.git`
+
+## Документація
+
+- Expo docs: https://docs.expo.dev/
+- Expo Router: https://docs.expo.dev/router/introduction/
